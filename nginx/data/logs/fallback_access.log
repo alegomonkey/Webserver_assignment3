@@ -408,3 +408,6 @@
 [25/Nov/2025:17:02:48 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 152.32.252.198] [Length 154] [Gzip -] "-" "-"
 [25/Nov/2025:17:02:48 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 152.32.252.198] [Length 154] [Gzip -] "-" "-"
 [25/Nov/2025:17:07:09 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 106.75.67.185] [Length 154] [Gzip -] "-" "-"
+[25/Nov/2025:17:45:09 +0000] 400 - GET http 45.55.66.169 "/" [Client 167.94.138.59] [Length 252] [Gzip -] "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)" "-"
+[25/Nov/2025:17:45:11 +0000] 400 - - http localhost "-" [Client 167.94.138.59] [Length 154] [Gzip -] "-" "-"
+[25/Nov/2025:17:45:28 +0000] 400 - GET http 45.55.66.169 "/sitemap.xml" [Client 167.94.138.59] [Length 252] [Gzip -] "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)" "-"

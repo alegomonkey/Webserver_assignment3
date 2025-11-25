@@ -3,10 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const pdfDirectory = path.join(__dirname, 'pdfs');
+const pdfFolder = path.join(__dirname, 'pdfs');
 
 function validatePDF(pdfName) {
-  const filePath = path.join(pdfDirectory, `${pdfName}.pdf`);
+  const filePath = path.join(pdfFolder, pdfName);
   try {
     return fs.existsSync(filePath);
   } catch (err) {
@@ -16,3 +16,4 @@ function validatePDF(pdfName) {
 }
 
 module.exports = { validatePDF };
+

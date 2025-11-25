@@ -5,6 +5,9 @@ const path = require('path');
 const pdfFolder = path.join(__dirname, 'pdfs');
 let cachedPDFs = null;
 
+/**
+ * Scan the folder and update cached list of PDFs
+ */
 function scanPDFs() {
   try {
     const files = fs.readdirSync(pdfFolder);
@@ -15,6 +18,9 @@ function scanPDFs() {
   }
 }
 
+/**
+ * Get list of PDFs (cached if available)
+ */
 function getPDFList() {
   if (!cachedPDFs) {
     scanPDFs();
@@ -22,4 +28,4 @@ function getPDFList() {
   return cachedPDFs;
 }
 
-module.exports = { getPDFList };
+module.exports = { getPDFList, scanPDFs };
