@@ -1,13 +1,14 @@
 // pdfDiscovery.js
+// finds and caches all available PDFs in the server
 const fs = require('fs');
 const path = require('path');
 
+// find pdf folder & init cache for all existing PDFs
 const pdfFolder = path.join(__dirname, 'pdfs');
 let cachedPDFs = null;
 
-/**
- * Scan the folder and update cached list of PDFs
- */
+// scan the folder and update cached list of PDFs
+// cachedPDFs has ONLY file name, not extension
 function scanPDFs() {
   try {
     const files = fs.readdirSync(pdfFolder);
@@ -18,9 +19,7 @@ function scanPDFs() {
   }
 }
 
-/**
- * Get list of PDFs (cached if available)
- */
+// get list of PDFs (cached if available)
 function getPDFList() {
   if (!cachedPDFs) {
     scanPDFs();
