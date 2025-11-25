@@ -4,9 +4,9 @@ const express = require("express");
 const path = require('path');
 
 // import custom modules
-const { router } = require('routing.js');
-const { getPDFList } = require('pdfDiscovery.js');
-const { validatePDF } = require('pdfValidate.js');
+const { router } = require('./routing.js');
+const { getPDFList } = require('./pdfDiscovery.js');
+const { validatePDF } = require('./pdfValidate.js');
 
 
 const PORT = 3010;
@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Apply routing.js to the app
-app.use('/', routing);
+app.use('/', router);
 
 
 /*
