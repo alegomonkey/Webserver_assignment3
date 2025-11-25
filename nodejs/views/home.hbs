@@ -26,17 +26,15 @@
       </p>
     </section>
 
-    <hr>
-
     <!-- PDF Rows -->
     <section class="pdf-links">
       {{#each pdfs}}
-        <div class="pdf-row" id="{{this.id}}">
+        <hr id="{{this.id}}">
+        <div class="pdf-row">
           <h2>{{this.title}}</h2>
           <p>{{this.description}}</p>
           <a href="/{{this.id}}" class="download-btn">View PDF</a>
         </div>
-        <br>
       {{/each}}
     </section>
   </body>
