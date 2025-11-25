@@ -1,35 +1,43 @@
-// routing.js
 const express = require('express');
 const path = require('path');
-const pdfValidator = require('./pdfValidator');
-const pdfDiscovery = require('./pdfDiscovery');
+const fs = require('fs');
 
 const router = express.Router();
 
+// Load metadata once at startup
+const metadataPath = path.join(__dirname, 'pdfs', 'pdfMetadata.json');
+let pdfMetadata = {};
+
+try {
+  const data = fs.readFileSync(metadataPath, 'utf-8');
+  pdfMetadata = JSON.parse(data);
+} catch (err) {
+  console.error('Error reading metadata file:', err);
+}
+
 // Main page route
 router.get('/', (req, res) => {
-  res.render('index'); // assumes Handlebars view engine
+  const pdfs = Object.keys(pdfMetadata).map(file => ({
+    id: file.replace('.pdf', ''),
+    title: pdfMetadata[file].title,
+    description: pdfMetadata[file].description
+  }));
+  res.render('home', { pdfs });
 });
 
-// Dynamic PDF routes
+// Serve PDFs if they exist
 router.get('/:pdfName', (req, res) => {
-  const pdfName = req.params.pdfName;
+  const pdfName = req.params.pdfName + '.pdf';
+  const filePath = path.join(__dirname, 'pdfs', pdfName);
 
-  if (pdfValidator.validatePDF(pdfName)) {
-    const filePath = path.join(__dirname, 'pdfs', `${pdfName}.pdf`);
+  if (pdfMetadata[pdfName] && fs.existsSync(filePath)) {
     res.sendFile(filePath);
   } else {
     res.status(404).send('PDF not found');
   }
 });
 
-// Endpoint to list available PDFs
-router.get('/list/pdfs', (req, res) => {
-  const pdfList = pdfDiscovery.getPDFList();
-  res.json(pdfList);
-});
-
-// Handle 404 errors
+// Handle 404 for other routes
 router.use((req, res) => {
   res.status(404).send('Page not found');
 });

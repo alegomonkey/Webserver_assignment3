@@ -1,0 +1,1 @@
+2025/11/25 17:02:46 [warn] 243#243: *6519 using uninitialized "server" variable while logging request, client: 152.32.252.198, server: johnnysylvain.com, request: "GET / HTTP/1.1", host: "johnnysylvain.com"

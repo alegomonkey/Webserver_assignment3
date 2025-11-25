@@ -403,3 +403,8 @@
 [25/Nov/2025:16:21:53 +0000] 404 - GET http 45.55.66.169 "/docs/.env" [Client 78.153.140.151] [Length 150] [Gzip -] "Mozilla/5.0 (Linux; U; Android 2.3.5; en-gb; HTC_DesireHD_A9191 Build/GRJ90) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1" "-"
 [25/Nov/2025:16:21:53 +0000] 404 - GET http 45.55.66.169 "/old/.env" [Client 78.153.140.151] [Length 150] [Gzip -] "Opera/6.05 (Windows 2000; U)  [fr]" "-"
 [25/Nov/2025:16:31:16 +0000] 400 - GET http 45.55.66.169 "/" [Client 124.198.132.121] [Length 252] [Gzip -] "-" "-"
+[25/Nov/2025:16:59:11 +0000] 200 - GET http localhost-nginx-proxy-manager "/" [Client 93.174.93.12] [Length 1033] [Gzip -] "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.122 Safari/537.36" "-"
+[25/Nov/2025:17:02:47 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 152.32.252.198] [Length 154] [Gzip -] "-" "-"
+[25/Nov/2025:17:02:48 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 152.32.252.198] [Length 154] [Gzip -] "-" "-"
+[25/Nov/2025:17:02:48 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 152.32.252.198] [Length 154] [Gzip -] "-" "-"
+[25/Nov/2025:17:07:09 +0000] 400 - - http localhost-nginx-proxy-manager "-" [Client 106.75.67.185] [Length 154] [Gzip -] "-" "-"

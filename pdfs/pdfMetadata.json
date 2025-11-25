@@ -1,0 +1,14 @@
+{
+  "NewEngland.pdf": {
+    "title": "New England Tree Identification Guide",
+    "description": "This guide provides a detailed introduction to the diverse tree species found across the forests of New England. It explains how to identify trees through seasonal changes, focusing on leaves, bark, buds, and fruit. Historical notes highlight how early settlers and naturalists cataloged these species, shaping forestry practices and ecological studies in the region."
+  },
+  "UK.pdf": {
+    "title": "UK Tree Identification Guide",
+    "description": "A practical booklet covering 53 of the most common tree species across the United Kingdom and Ireland. It includes clear illustrations of leaves and bark, along with notes on habitat and distribution. The guide emphasizes the cultural and historical importance of trees in Britain, from ancient oak woodlands to modern urban plantings, making it useful for both students and citizen scientists."
+  },
+  "Australia.pdf": {
+    "title": "Australia Tree Identification Guide",
+    "description": "This guide highlights distinctive native trees of Australia, focusing on species common in southern and eastern regions. It provides photographs, ecological notes, and identification tips for gum trees, wattles, and other iconic species. The descriptions also explore the role of these trees in Aboriginal traditions, modern conservation efforts, and their adaptation to Australia’s unique climate and soils."
+  }
+}

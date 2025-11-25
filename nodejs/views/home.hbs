@@ -5,47 +5,38 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="#top">Home</a></li>
-        <li><a href="#newengland">New England PDF</a></li>
-        <li><a href="#uk">UK PDF</a></li>
-        <li><a href="#australia">Australia PDF</a></li>
+        {{#each pdfs}}
+          <li><a href="#{{this.id}}">{{this.title}}</a></li>
+        {{/each}}
       </ul>
     </nav>
 
-    <!-- Intro Section -->
+    <!-- Intro -->
     <section id="top" class="intro">
       <h1>Tree Identification</h1>
       <p>
         Tree identification has been a cornerstone of natural science for centuries. 
         From early botanists cataloging species to modern ecologists studying biodiversity, 
         the ability to recognize and classify trees has shaped forestry, medicine, and 
-        environmental conservation. Today, tree identification remains vital for 
-        understanding ecosystems, preserving habitats, and connecting people with the 
-        natural world.
+        environmental conservation.
       </p>
     </section>
 
     <hr>
 
-    <!-- PDF Download Rows -->
+    <!-- PDF Rows -->
     <section class="pdf-links">
-      <div class="pdf-row" id="newengland">
-        <h2>New England Tree Guide</h2>
-        <a href="/NewEngland" class="download-btn">Download PDF</a>
-      </div>
-
-      <div class="pdf-row" id="uk">
-        <h2>UK Tree Guide</h2>
-        <a href="/UK" class="download-btn">Download PDF</a>
-      </div>
-
-      <div class="pdf-row" id="australia">
-        <h2>Australia Tree Guide</h2>
-        <a href="/Australia" class="download-btn">Download PDF</a>
-      </div>
+      {{#each pdfs}}
+        <div class="pdf-row" id="{{this.id}}">
+          <h2>{{this.title}}</h2>
+          <p>{{this.description}}</p>
+          <a href="/{{this.id}}" class="download-btn">Download PDF</a>
+        </div>
+      {{/each}}
     </section>
   </body>
 </html>
